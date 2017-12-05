@@ -48,3 +48,6 @@ set noerrorbells
 "indentation and stuff
 set smarttab
 set si
+
+"use system keyboard for yanks
+set clipboard=unnamed
