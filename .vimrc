@@ -53,6 +53,3 @@ set si
 "use system clipboard for yanks
 set clipboard=unnamed
 
-"autosave folds
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
