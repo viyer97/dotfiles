@@ -40,6 +40,7 @@ set wildignore=*.o,*~,*.pyc
 
 "set line numbers
 set number
+set numberwidth=3
 highlight LineNr term=bold cterm=NONE ctermfg=Grey ctermbg=NONE 
 
 "no annoyting noises
