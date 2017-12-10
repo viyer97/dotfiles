@@ -53,3 +53,6 @@ set si
 "use system clipboard for yanks
 set clipboard=unnamed
 
+"if opened a file without sudo access
+ca w!! w !sudo tee "%"
+
