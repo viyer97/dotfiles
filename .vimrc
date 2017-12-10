@@ -49,5 +49,5 @@ set noerrorbells
 set smarttab
 set si
 
-"use system keyboard for yanks
+"use system clipboard for yanks
 set clipboard=unnamed
