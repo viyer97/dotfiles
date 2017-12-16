@@ -24,8 +24,11 @@ let g:NerdTreeWinSize=20
 "automatically closes NERDTree is only file left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-"
+"quickly go to function declaration (or definition)
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
+"quick execution of python code
+nnoremap <leader>ff :!python %<CR>
 
 "faster escaping
 :imap wj <Esc>
