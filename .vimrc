@@ -7,18 +7,25 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'valloric/youcompleteme'
 call vundle#end()
 filetype plugin indent on
 
-"automatically open tree window and sets to edit file window
+""automatically open tree window and sets to edit file window
 autocmd vimenter * NERDTree
 autocmd BufEnter * NERDTreeMirror
 autocmd VimEnter * wincmd w
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
+"change NERDTree width (may not actually work
+let g:NerdTreeWinSize=20
+
 "automatically closes NERDTree is only file left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 "faster escaping
 :imap wj <Esc>
