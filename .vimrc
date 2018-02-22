@@ -44,6 +44,12 @@ nnoremap <c-l> <c-w>l
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set backspace=indent,eol,start
+
+"enable vim syntax
+if !exists("g:syntax_on")
+        syntax enable
+endif
 
 "ignore compiled files
 set wildignore=*.o,*~,*.pyc
@@ -59,6 +65,7 @@ set noerrorbells
 "indentation and stuff
 set smarttab
 set si
+set autoindent
 
 "use system clipboard for yanks
 set clipboard=unnamed
@@ -66,3 +73,6 @@ set clipboard=unnamed
 "if opened a file without sudo access
 ca w!! w !sudo tee "%"
 
+"set coloscheme and font
+set guifont=Consolas:h12
+colorscheme slate
