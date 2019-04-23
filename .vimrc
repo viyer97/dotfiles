@@ -1,31 +1,31 @@
 set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'scrooloose/nerdtree'
-Plugin 'valloric/youcompleteme'
-call vundle#end()
-filetype plugin indent on
-
-""automatically open tree window and sets to edit file window
-autocmd vimenter * NERDTree
-autocmd BufEnter * NERDTreeMirror
-autocmd VimEnter * wincmd w
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-
-"change NERDTree width (may not actually work
-let g:NerdTreeWinSize=20
-
-"automatically closes NERDTree is only file left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-"quickly go to function declaration (or definition)
-nnoremap <leader>jd :YcmCompleter GoTo<CR>
+"filetype off
+"
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+"
+"Plugin 'VundleVim/Vundle.vim'
+"
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'valloric/youcompleteme'
+"call vundle#end()
+"filetype plugin indent on
+"
+"""automatically open tree window and sets to edit file window
+"autocmd vimenter * NERDTree
+"autocmd BufEnter * NERDTreeMirror
+"autocmd VimEnter * wincmd w
+"let NERDTreeMinimalUI = 1
+"let NERDTreeDirArrows = 1
+"
+""change NERDTree width (may not actually work
+"let g:NerdTreeWinSize=20
+"
+""automatically closes NERDTree is only file left
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"
+""quickly go to function declaration (or definition)
+"nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 "quick execution of python code
 nnoremap <leader>ff :!python %<CR>
@@ -57,7 +57,7 @@ set wildignore=*.o,*~,*.pyc
 "set line numbers
 set number
 set numberwidth=3
-highlight LineNr term=bold cterm=NONE ctermfg=Grey ctermbg=NONE 
+"highlight LineNr term=bold cterm=NONE ctermfg=Grey ctermbg=NONE 
 
 "no annoyting noises
 set noerrorbells
@@ -73,6 +73,8 @@ set clipboard=unnamed
 "if opened a file without sudo access
 ca w!! w !sudo tee "%"
 
+set laststatus=2
+
 "set coloscheme and font
-set guifont=Consolas:h12
-colorscheme slate
+"set guifont=Consolas:h12
+"colorscheme slate
